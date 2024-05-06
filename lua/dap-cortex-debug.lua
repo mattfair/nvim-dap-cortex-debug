@@ -51,8 +51,6 @@ function M.setup(opts)
         -- Check if the 'rtt' element is already registered
         if not dapui.elements or not dapui.elements['rtt'] then
             dapui.register_element('rtt', require('dap-cortex-debug.dapui.rtt'))
-        else
-            print('RTT element already registered')
         end
     else
         utils.warn_once('nvim-dap-ui not installed, cannot register RTT element')
